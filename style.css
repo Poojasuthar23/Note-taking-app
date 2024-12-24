@@ -1,0 +1,85 @@
+:root {
+    --bg-color:#ebb7bb;
+    --text-color:#E6E6FA;
+    --note-bg:#555555;
+  }
+  
+  [data-theme="dark"] {
+    --bg-color:#ddddc9;
+    --text-color: #333333;
+    --note-bg:  #cababa;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    border-bottom: 2px solid var(--text-color);
+  }
+  
+  #toggle-mode {
+    padding: 15px 20px;
+    cursor: pointer;
+  }
+  
+  main {
+    margin: 20px 0;
+  }
+  
+  #add-note {
+    padding: 15px 20px;
+    cursor: pointer;
+  }
+  
+  #notes-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+  }
+  
+  .note {
+    background-color: var(--note-bg);
+    padding: 15px;
+    border-radius: 5px;
+    width: calc(33% - 20px);
+    box-shadow: 0 8px 10px rgba(241, 231, 231, 0.2);
+  }
+  
+  .note textarea {
+    width: 100%;
+    border: none;
+    background: transparent;
+    resize: none;
+    color: var(--text-color);
+    font-size:30px;
+    line-height:1.6;
+  }
+  
+  .note button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 600px) {
+    .note {
+      width: calc(100% - 20px);
+    }
+  }
